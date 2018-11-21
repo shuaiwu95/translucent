@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery半透明拖拽插件</title>
+    <link rel="stylesheet" type="text/css" href="translucent/style.css"/>
+    <style>
+    </style>
+    <script src="translucent/jquery.js"></script>
+    <script src="translucent/jquery-translucent.js"></script>
+</head>
+<body style="background-color: #dddddd;">
+
+<script>
+    $("body").translucent({
+        titleGroundColor:"#5396BA",
+        backgroundColor:"#ffffff",
+        titleFontColor:"#ffffff",
+        titleFontSize:14,
+        opacity:1,
+        zIndex:100,
+        textHtml:'<span>我的弹窗demo</span>',
+        close:function ($dom) {
+            alert("确定要关闭吗？")
+        }
+    });
+</script>
+</body>
+</html>

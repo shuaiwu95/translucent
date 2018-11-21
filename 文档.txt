@@ -1,0 +1,39 @@
+1.如何加载
+本插件基于jquery开发，请预先加载jquery
+加载css和js
+   <link rel="stylesheet" type="text/css" href="translucent/style.css"/>
+<script src="translucent/jquery-translucent.js"></script>
+
+2.调用此插件
+ $("body").translucent();
+
+如此就可以在窗口显示一个弹窗了
+当然也可以加到其它指定的容器中
+
+3.参数
+ 	    width:500, //默认宽度
+            height:500, //默认高度
+            drag:true, //启动拖拽
+            opacity:0.8, //透明度
+            border:"1px solid #ddd",
+            borderRadius:8,
+            backgroundColor:"rgb(225, 225, 225)",//默认背景色
+            titleHeight:"40px",//title高度
+            titleGroundColor:"#999",//title默认背景色
+            shadow:true,//开启阴影
+            positionTop:100,//默认定位位置
+            positionLeft:100,
+            titleText:"新建弹窗",//标题文本
+            titleFontSize:12,
+            titleFontColor:"#000",
+            titleFontFamily:"微软雅黑",
+            textHtml:"<p>这是一个新建的弹窗！</p>",
+            titleTextCenter:false,
+            close:null //关闭窗口回调函数,传出参数当前弹窗的jquery dom节点,
+            zIndex:10
+可以通过参数改变弹窗样式位置等
+$("body").translucent({
+	width:1000,
+	textHtml:"<div>这是一个新建的弹窗！</div>",
+	titleText:"弹窗标题内容"
+});
